@@ -24,9 +24,9 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 
 // Works Image
-import ashverse from "./projects/ashverse.png";
-import cdss from "./projects/cdss.png";
-import cravio from "./projects/cravio.png";
+import ashverse from "./projects/ashverse.webp";
+import cdss from "./projects/cdss.webp";
+import cravio from "./projects/cravio.webp";
 
 export {
   ashverse,
