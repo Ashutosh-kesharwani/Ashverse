@@ -1,11 +1,5 @@
 import About from "./About";
 import AppToaster from "./AppToaster";
-import {
-  BallCanvas,
-  ComputersCanvas,
-  EarthCanvas,
-  StarsCanvas,
-} from "./canvas";
 import Contact from "./Contact";
 import Experience from "./Experience";
 import Footer from "./Footer";
@@ -19,17 +13,13 @@ import Works from "./Works";
 export {
   About,
   AppToaster,
-  BallCanvas,
   CanvasLoader,
-  ComputersCanvas,
   Contact,
-  EarthCanvas,
   Experience,
   Footer,
   Hero,
   Highlights,
   Navbar,
-  StarsCanvas,
   Tech,
   Works,
 };

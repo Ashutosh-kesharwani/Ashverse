@@ -1,13 +1,13 @@
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { useRef, useState } from "react";
-
+import { lazy, Suspense, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
+
 import { config } from "../config/config.js";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
-import { EarthCanvas } from "./canvas";
+const EarthCanvas = lazy(() => import("./canvas/Earth"));
 
 const Contact = () => {
   const formRef = useRef();
@@ -169,7 +169,9 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="order-first h-[350px] md:h-[500px] xl:order-none xl:h-auto"
       >
-        <EarthCanvas />
+        <Suspense fallback={null}>
+          <EarthCanvas />
+        </Suspense>
       </motion.div>
     </div>
   );

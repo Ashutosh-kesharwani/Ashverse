@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import {
@@ -9,29 +10,37 @@ import {
   Hero,
   Highlights,
   Navbar,
-  StarsCanvas,
   Tech,
   Works,
-} from "./components/index.js";
+} from "./components";
+
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 const App = () => {
   return (
     <BrowserRouter>
       <AppToaster />
+
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
           <Navbar />
           <Hero />
         </div>
+
         <About />
         <Experience />
         <Tech />
         <Works />
         <Highlights />
+
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
+
+          <Suspense fallback={null}>
+            <StarsCanvas />
+          </Suspense>
         </div>
+
         <Footer />
       </div>
     </BrowserRouter>
