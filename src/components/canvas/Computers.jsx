@@ -1,12 +1,12 @@
-import { Canvas } from '@react-three/fiber';
-import { Suspense, useEffect, useState } from 'react';
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useEffect, useState } from "react";
 
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
-import CanvasLoader from '../Loader.jsx';
+import CanvasLoader from "../Loader.jsx";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./desktop_pc/scene.gltf');
+  const computer = useGLTF("./desktop_pc/scene.gltf");
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
@@ -39,12 +39,12 @@ const ComputersCanvas = () => {
   // So here what we do is that intead of calling set func directly in useEffect , to avoid one extra render we initialie the value of variable by def at time of declare state var
 
   const [isMobile, setIsMobile] = useState(
-    () => window.matchMedia('(max-width: 500px)').matches
+    () => window.matchMedia("(max-width: 500px)").matches
   );
 
   useEffect(() => {
     // Add a listener for changes to screen size
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
 
     // define callback func to handle changes in media query
     const handleMediaQueryChange = (event) => {
@@ -52,18 +52,18 @@ const ComputersCanvas = () => {
     };
 
     // Add callback func as a listener to listen for change to media query
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     // In react good practice
     // Always , Remove listener when component is unmounted
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
 
   return (
     <Canvas
-      frameLoop="demand"
+      frameloop="demand"
       shadows
       camera={{
         position: [20, 3, 5],
@@ -79,7 +79,7 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-        />{' '}
+        />{" "}
         {/* These controlls are use for moving our model left or right like that within a orbit center
         Props
         > enableZoom : false : we dont want to zoomIn in model
