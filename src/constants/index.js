@@ -1,270 +1,137 @@
-/* Constants for the project
-> This file will be acts as a single source of truth for the project
-> It includes constants like navLinks, services, technologies, experiences, testimonials, projects
-
-*/
 import {
+  ashverse,
   backend,
-  carrent,
-  creator,
-  css,
-  docker,
-  figma,
+  cdss,
+  cpp,
+  cravio,
+  express,
   git,
-  html,
   javascript,
-  jobit,
-  meta,
-  mobile,
   mongodb,
+  mysql,
   nodejs,
+  postman,
+  python,
   reactjs,
-  redux,
-  shopify,
-  starbucks,
   tailwind,
-  tesla,
-  threejs,
-  tripguide,
-  typescript,
   web,
-} from '../assets';
+} from "../assets";
 
 export const navLinks = [
-  {
-    id: 'about',
-    title: 'About',
-  },
-  {
-    id: 'work',
-    title: 'Work',
-  },
-  {
-    id: 'contact',
-    title: 'Contact',
-  },
+  { id: "about", title: "About" },
+  { id: "experience", title: "Experience" },
+  { id: "projects", title: "Projects" },
+  { id: "highlights", title: "Highlights" },
+  { id: "contact", title: "Contact" },
 ];
 
-const services = [
+export const services = [
+  { title: "Full Stack Development", icon: web },
+  { title: "React Ecosystem", icon: reactjs },
+  { title: "Backend & APIs", icon: backend },
+];
+
+export const technologies = [
+  { name: "JavaScript", icon: javascript },
+  { name: "C++", icon: cpp },
+  { name: "Python", icon: python },
+  { name: "React.js", icon: reactjs },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Node.js", icon: nodejs },
+  { name: "Express.js", icon: express },
+  { name: "MongoDB", icon: mongodb },
+  { name: "MySQL", icon: mysql },
+  { name: "Git", icon: git },
+  { name: "Postman", icon: postman },
+];
+
+export const experiences = [
   {
-    title: 'Web Developer',
-    icon: web,
-  },
-  {
-    title: 'React Native Developer',
-    icon: mobile,
-  },
-  {
-    title: 'Backend Developer',
+    title: "Junior Associate – IT",
+    company_name: "OctaScale Technologies Pvt. Ltd. · Prayagraj, India",
     icon: backend,
-  },
-  {
-    title: 'Content Creator',
-    icon: creator,
-  },
-];
-
-const technologies = [
-  {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-  },
-  {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  {
-    name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: tailwind,
-  },
-  {
-    name: 'Node JS',
-    icon: nodejs,
-  },
-  {
-    name: 'MongoDB',
-    icon: mongodb,
-  },
-  {
-    name: 'Three JS',
-    icon: threejs,
-  },
-  {
-    name: 'git',
-    icon: git,
-  },
-  {
-    name: 'figma',
-    icon: figma,
-  },
-  {
-    name: 'docker',
-    icon: docker,
-  },
-];
-
-const experiences = [
-  {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
+    iconBg: "#383E56",
+    date: "Jun 2025 – Jul 2026",
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      "Resolved production-level issues in a Ruby on Rails MVC system, debugging REST APIs and SQL queries to maintain shipment-data accuracy.",
+      "Tracked Jira tickets and delivered production-ready Git-based fixes in collaboration with cross-functional teams.",
     ],
   },
   {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2021 - Feb 2022',
+    title: "Freelance Full Stack Developer (Project-Based)",
+    company_name: "Self-Employed · Remote",
+    icon: web,
+    iconBg: "#E6DEDD",
+    date: "2023 – Present",
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
-    iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
-    iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      "Designed and built full-stack MERN applications tailored to client requirements, owning architecture, UI, and database design end-to-end.",
+      "Delivered responsive, production-ready features through REST APIs using Node.js and MongoDB for multiple clients.",
     ],
   },
 ];
 
-const testimonials = [
+export const projects = [
   {
-    testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
-  },
-];
-
-const projects = [
-  {
-    name: 'Car Rent',
+    name: "Cravio – Food Ordering Platform",
+    image: cravio,
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      "MERN food-ordering platform with discovery, cart and wishlist, Stripe Checkout, live order tracking, and an admin dashboard.",
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
+      { name: "React.js", color: "blue-text-gradient" },
+      { name: "Node.js", color: "green-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "Stripe", color: "pink-text-gradient" },
     ],
-    image: carrent,
-    source_code_link: 'https://github.com/',
+    live_link: "https://cravio-mern.vercel.app/",
   },
+
   {
-    name: 'Job IT',
+    name: "AshVerse – Personal Portfolio",
+    image: ashverse,
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      "Interactive portfolio with responsive sections, Three.js scenes, Framer Motion animations, and an EmailJS contact flow.",
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
+      { name: "React.js", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "Three.js", color: "blue-text-gradient" },
+      { name: "Framer Motion", color: "pink-text-gradient" },
     ],
-    image: jobit,
-    source_code_link: 'https://github.com/',
+    live_link: "https://ashverse.vercel.app/",
   },
+
   {
-    name: 'Trip Guide',
+    name: "Clinical Decision Support System (CDSS)",
+    image: cdss,
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      "Healthcare support interface that sends clinical inputs to ML APIs and returns real-time classification predictions.",
     tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "JavaScript", color: "green-text-gradient" },
+      { name: "HTML/CSS", color: "pink-text-gradient" },
+      { name: "ML APIs", color: "blue-text-gradient" },
     ],
-    image: tripguide,
-    source_code_link: 'https://github.com/',
   },
 ];
 
-export { experiences, projects, services, technologies, testimonials };
+export const achievements = [
+  "Top 10, U Hack 3.0 Hackathon (2024) for the Clinical Decision Support System.",
+  "Delivered multiple full-stack freelance projects with positive client feedback.",
+];
+
+export const certifications = [
+  "Web Development – IIIT Allahabad",
+  "Machine Learning – IIIT Allahabad",
+  "MongoDB – UCER",
+];
+
+export const education = [
+  {
+    institution: "United College of Engineering and Research, Prayagraj",
+    detail:
+      "B.Tech, Computer Science and Engineering · 2021 – 2025 · CGPA: 7.5",
+  },
+  {
+    institution: "Vishnu Bhagwan Public School, Prayagraj",
+    detail: "Class XII (CBSE) · 2020 · 92.6%",
+  },
+];
