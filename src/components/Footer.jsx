@@ -12,7 +12,6 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-black text-white-100">AshVerse</h2>
-
             <p className="mt-4 leading-7 text-secondary">
               Building scalable, user-focused web experiences with modern
               technologies and interactive 3D experiences.
@@ -21,6 +20,9 @@ const Footer = () => {
               href="/Ashutosh_Kesharwani_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-accent
+              px-5 py-3 font-semibold text-white-100 transition-all duration-300
+              hover:bg-accent-2"
             >
               <FaDownload />
               <span>Resume</span>
