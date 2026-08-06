@@ -1,32 +1,33 @@
-import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
-import { services } from '../constants';
-import { SectionWrapper } from '../hoc';
-import { styles } from '../styles';
-import { fadeIn, textVariant } from '../utils/motion';
+import { services } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className="xs:w-65 w-full">
+  <Tilt
+    className="xs:w-65 w-full "
+    tiltMaxAngleX={12}
+    tiltMaxAngleY={12}
+    transitionSpeed={600}
+    glareEnable={false}
+  >
     <motion.div
-      variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-px rounded-card shadow-card"
+      variants={fadeIn("right", "spring", index * 0.25, 0.75)}
+      className="green-pink-gradient rounded-card p-px "
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary rounded-card py-5 px-12 min-h-70 flex justify-evenly items-center flex-col"
-      >
+      <div className="service-card rounded-card min-h-70 py-8 px-10 flex flex-col items-center justify-evenly">
         <img
           src={icon}
-          alt="web-development"
-          className="w-16 h-16 object-contain"
+          alt={title}
+          className="service-icon w-16 h-16 object-contain"
         />
 
-        <h3 className="text-white text-5 font-bold text-center">{title}</h3>
+        <h3 className="text-white-100 text-[22px] font-semibold text-center leading-snug">
+          {title}
+        </h3>
       </div>
     </motion.div>
   </Tilt>
@@ -37,20 +38,22 @@ const About = () => {
     <section>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
+
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-7.5"
+        variants={fadeIn("", "", 0.1, 1)}
+        className="mt-4 max-w-3xl text-[17px] leading-8 text-secondary"
       >
-        Aspiring Software Developer with strong proficiency in C++ and
-        problem-solving, along with hands-on experience in backend and MERN
-        stack development. Skilled in working with databases and building
-        scalable, efficient applications.
+        Full Stack Developer passionate about building scalable web applications
+        and creating intuitive user experiences. Experienced with React,
+        Node.js, Express, MongoDB, and modern JavaScript, delivering
+        production-ready applications and solving real-world engineering
+        problems.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap justify-center gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
@@ -59,4 +62,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, 'about');
+export default SectionWrapper(About, "about");
