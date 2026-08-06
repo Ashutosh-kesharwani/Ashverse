@@ -9,9 +9,9 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-30 max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
-        <div className="flex flex-col justify-center items-center mt-2">
-          <div className="w-5 h-5 rounded-full " />
-          <div className="w-1 sm:h-80 h-40  violet-gradient" />
+        <div className="mt-2 flex flex-col items-center justify-center">
+          <div className="h-5 w-5 shrink-0 rounded-full bg-accent" />
+          <div className="-mt-1 h-40 w-[4px] rounded-full sm:h-80 violet-gradient" />
         </div>
 
         <div>
