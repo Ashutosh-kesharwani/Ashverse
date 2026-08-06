@@ -96,7 +96,7 @@ export const projects = [
       { name: "Three.js", color: "blue-text-gradient" },
       { name: "Framer Motion", color: "pink-text-gradient" },
     ],
-    live_link: "https://ashverse.vercel.app/",
+    live_link: "https://ashverse-three.vercel.app/",
   },
 
   {

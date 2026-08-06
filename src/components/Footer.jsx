@@ -17,15 +17,13 @@ const Footer = () => {
               Building scalable, user-focused web experiences with modern
               technologies and interactive 3D experiences.
             </p>
-
             <a
               href="/Ashutosh_Kesharwani_Resume.pdf"
               target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-xl bg-accent px-5 py-3 font-semibold text-white-100 transition-all duration-300 hover:bg-accent-2"
+              rel="noopener noreferrer"
             >
               <FaDownload />
-              Resume
+              <span>Resume</span>
             </a>
           </div>
 
@@ -57,7 +55,7 @@ const Footer = () => {
 
             <div className="mt-5 flex flex-col gap-4">
               <a
-                href="https://github.com/YOUR_GITHUB"
+                href="https://github.com/Ashutosh-kesharwani/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-3 text-secondary transition-colors hover:text-accent-2"
@@ -67,7 +65,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/YOUR_LINKEDIN"
+                href="https://www.linkedin.com/in/ashutosh1406/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-3 text-secondary transition-colors hover:text-accent-2"
@@ -77,7 +75,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://leetcode.com/YOUR_USERNAME"
+                href="https://leetcode.com/u/ashutoshkesharwani20021406/"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-3 text-secondary transition-colors hover:text-accent-2"

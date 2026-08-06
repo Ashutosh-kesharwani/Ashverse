@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 import { lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 
@@ -19,6 +21,7 @@ const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 const App = () => {
   return (
     <BrowserRouter>
+      <Analytics />
       <AppToaster />
 
       <div className="relative z-0 bg-primary">
