@@ -7,15 +7,11 @@ const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className="relative w-full min-h-screen mx-auto">
+      {/* Hero Content */}
       <div
-        className={`absolute inset-0 top-30 max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-28 z-10 max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
-        <div className="mt-2 flex flex-col items-center justify-center">
-          <div className="h-5 w-5 shrink-0 rounded-full bg-accent" />
-          <div className="-mt-1 h-40 w-[4px] rounded-full sm:h-80 violet-gradient" />
-        </div>
-
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm{" "}
@@ -24,6 +20,7 @@ const Hero = () => {
               Kesharwani
             </span>
           </h1>
+
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I build responsive, scalable <br className="sm:block hidden" />
             full-stack web applications.
@@ -31,13 +28,23 @@ const Hero = () => {
         </div>
       </div>
 
-      <Suspense fallback={null}>
-        <ComputersCanvas />
-      </Suspense>
+      {/* 3D Canvas */}
+      <div className="absolute inset-0">
+        <Suspense
+          fallback={
+            <div className="w-full h-full flex items-center justify-center">
+              Loading...
+            </div>
+          }
+        >
+          <ComputersCanvas />
+        </Suspense>
+      </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      {/* Scroll Indicator */}
+      <div className="absolute xs:bottom-10 bottom-32 z-10 w-full flex justify-center items-center">
         <a href="#about">
-          <div className="w-8.75 h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="w-[35px] h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],
