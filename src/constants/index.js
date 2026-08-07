@@ -126,7 +126,7 @@ export const certifications = [
 
 export const education = [
   {
-    institution: "United College of Engineering and Research, Prayagraj",
+    institution: "Dr. A.P.J. Abdul Kalam Technical University, Lucknow",
     detail:
       "B.Tech, Computer Science and Engineering · 2021 – 2025 · CGPA: 7.5",
   },
