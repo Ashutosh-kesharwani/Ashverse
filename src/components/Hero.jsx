@@ -21,28 +21,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
       {/* Hero Text */}
       <div
-        className={`absolute top-28 left-0 right-0 z-10 max-w-7xl mx-auto ${styles.paddingX}`}
+        className={`absolute top-40 sm:top-28 left-0 right-0 z-10 max-w-7xl mx-auto ${styles.paddingX}`}
       >
-        {/* pointer-events-none lets mouse events pass through */}
-        <div className="pointer-events-none flex flex-row items-start gap-5">
-          <div>
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi, I'm{" "}
-              <span className="blue-text-gradient">
-                Ashutosh <br />
-                Kesharwani
-              </span>
-            </h1>
+        <div>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+            Hi, I'm{" "}
+            <span className="blue-text-gradient">
+              Ashutosh <br />
+              Kesharwani
+            </span>
+          </h1>
 
-            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              I build responsive, scalable
-              <br className="sm:block hidden" />
-              full-stack web applications.
-            </p>
-          </div>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+            I build responsive, scalable
+            <br className="sm:block hidden" />
+            full-stack web applications.
+          </p>
         </div>
       </div>
 
@@ -57,17 +54,24 @@ const Hero = () => {
 
       {/* Mobile */}
       {isMobile && (
-        <div className="absolute inset-0 flex items-center justify-center px-6">
+        <div className="absolute left-1/2 bottom-36 -translate-x-1/2 w-full flex justify-center">
           <img
             src="/computer.png"
             alt="Computer"
-            className="w-full max-w-sm object-contain animate-float"
+            className="
+              w-[90%]
+              max-w-[360px]
+              object-contain
+              animate-float
+              pointer-events-none
+              select-none
+            "
           />
         </div>
       )}
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 z-20 w-full flex justify-center items-center">
+      <div className="absolute bottom-6 z-20 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-16 rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
